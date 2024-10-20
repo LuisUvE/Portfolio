@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wdth,wght@50,200..900&family=Orbitron:wght@400..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
 body{
     background-color: hsl(0, 0%, 5%);
 }
@@ -8,7 +10,7 @@ p, h1{
 
 
 .navbar {
-    position: fixed;
+  position: fixed;
     width: 100%;
     background: #fff;
     height: 40px;
@@ -44,3 +46,30 @@ p, h1{
   .menu-items a:hover {
     color: black;
   }
+
+  .showcase-area {
+    padding: 50px;
+    font-size: 1.8rem;
+  }
+
+  .container__typing2 {
+    animation: animacion 5.5s steps(30) transparent .5s step-end infinite alternate;
+    width: 12.1em; 
+    white-space: nowrap;
+    overflow: hidden;
+    color: aliceblue;
+    border-right: 3px solid;
+    
+}
+
+@keyframes animacion {
+  from{
+    width: 0px;
+  }
+}
+
+@keyframes transparent{
+  50%{
+    border-color: transparent;
+  }
+}

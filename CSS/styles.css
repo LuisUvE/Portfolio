@@ -32,7 +32,7 @@ body{
 }
 
 .container__typing{
-    animation: animacion 3.5s steps(35)infinite;
+    animation: animacion 3.7s steps(35)infinite;
     width: 9em; 
     white-space: nowrap;
     overflow: hidden;
