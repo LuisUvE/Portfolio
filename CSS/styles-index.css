@@ -1,0 +1,46 @@
+body{
+    background-color: hsl(0, 0%, 5%);
+}
+
+p, h1{
+    color: aliceblue;
+}
+
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    background: #fff;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .menu-items {
+    display: flex;
+    order: 2;
+  }
+  
+  .menu-items li {
+    list-style: none;
+    margin-left: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+  }
+  
+  .menu-items a {
+    text-decoration: none;
+    color: #444;
+    font-weight: 500;
+  }
+  
+  .menu-items a:hover {
+    color: black;
+  }
