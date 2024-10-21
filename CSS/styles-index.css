@@ -1,10 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wdth,wght@50,200..900&family=Orbitron:wght@400..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 
 body{
+  font-family: "Orbitron", sans-serif;
     background-color: hsl(0, 0%, 5%);
 }
 
-p, h1{
+h1{
+  color: purple;
+}
+
+p{
     color: aliceblue;
 }
 
@@ -44,32 +49,38 @@ p, h1{
   }
   
   .menu-items a:hover {
-    color: black;
+    color: purple;
   }
 
   .showcase-area {
+    letter-spacing: 4px;
     padding: 50px;
-    font-size: 1.8rem;
-  }
-
-  .container__typing2 {
-    animation: animacion 5.5s steps(30) transparent .5s step-end infinite alternate;
-    width: 12.1em; 
-    white-space: nowrap;
-    overflow: hidden;
-    color: aliceblue;
-    border-right: 3px solid;
+    font-size: 1.5rem;
     
-}
-
-@keyframes animacion {
-  from{
-    width: 0px;
   }
-}
-
-@keyframes transparent{
-  50%{
-    border-color: transparent;
+  
+  .container_typing p {
+    animation: typing 3.5s steps(30) 0.5s 1 normal both,
+               blink .5s step-end infinite;
+    white-space: pre-line;
+    border-right: 3px solid;
+    display: inline-block;
+    width: 38.4em;
+    overflow: hidden;
   }
-}
+  
+  @keyframes typing {
+    from { 
+      width: 0;
+    }
+  }
+  
+  @keyframes blink {
+    from, to { 
+      border-color: transparent;
+    }
+    50% { 
+      border-color: aliceblue;
+    }
+  }
+  
