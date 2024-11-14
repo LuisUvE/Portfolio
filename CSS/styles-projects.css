@@ -1,0 +1,360 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wdth,wght@50,200..900&family=Orbitron:wght@400..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Orbitron", sans-serif;
+    background-color: hsl(0, 0%, 5%);
+    min-width: 300px;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2 {
+    color: purple;
+}
+
+p {
+    color: aliceblue;
+    font-size: 1.2rem;
+}
+
+.navbar {
+  width: 100%;
+  background: #fff;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 20px;
+}
+
+.menu-items {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-items a {
+  text-decoration: none;
+  color: #444;
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+.menu-items a:hover {
+  color: purple;
+}
+
+
+@media (max-width: 768px) {
+  .navbar-container {
+      flex-direction: column;
+      padding: 10px;
+  }
+
+  .menu-items {
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+  }
+}
+
+
+.contenedor {
+    width: 100%;
+    display: flex;
+    max-width: 1000px;
+    letter-spacing: 4px;
+    padding: 20px;
+    font-size: 1rem;
+    margin: 20px auto;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+.imwork {
+    display: flex;
+    justify-content: space-around;
+    transition: transform 0.3s ease;
+    flex-wrap: wrap;
+}
+
+.imwork img {
+    width: 100%;
+    max-width: 350px; 
+    height: auto;
+    margin: 20px;
+    transition: transform 0.3s ease; 
+}
+
+
+.imwork img:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+}
+
+@media (max-width: 768px) {
+    .navbar-container {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .menu-items {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .contenedor {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu-items a {
+        font-size: 1rem;
+    }
+
+    .contenedor {
+        padding: 5px;
+        font-size: 0.8rem;
+    }
+
+    .imwork img {
+        max-width: 250px; 
+    }
+}
+
+/* Estilos generales para la sección de experiencia */
+.experience-section {
+  width: 90%;
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #291b29;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1s ease-out;
+  color: #6a0dad; /* Púrpura */
+  text-align: center;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(50px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.experience-item {
+  display: flex;
+  justify-content: center; /* Centrar los elementos horizontalmente */
+  align-items: center; /* Centrar los elementos verticalmente */
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  flex-wrap: wrap; /* Permitir que los elementos se ajusten en pantallas pequeñas */
+}
+
+.experience-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.experience-item img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-right: 20px;
+  transition: transform 0.3s ease;
+}
+
+.experience-item img:hover {
+  transform: scale(1.1);
+}
+
+.experience-details {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  text-align: center; /* Centrar los textos dentro de los elementos de la experiencia */
+}
+
+.company-name {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #6a0dad; /* Púrpura */
+}
+
+.job-title {
+  font-size: 1rem;
+  color: #000000 ;
+}
+
+.dates {
+  font-size: 0.9rem;
+  color: #95a5a6;
+}
+
+.location {
+  font-size: 0.9rem;
+  color: #34495e;
+}
+
+.job-description {
+  font-size: 1rem;
+  color: #2c3e50;
+  line-height: 1.5;
+  text-align: left;
+  margin-top: 10px;
+  padding: 0 10px;
+  font-weight: normal;
+}
+
+/* Animación de entrada para los items */
+.experience-item:nth-child(1) {
+  animation: slideInLeft 0.5s ease-out;
+}
+
+.experience-item:nth-child(2) {
+  animation: slideInRight 0.5s ease-out;
+}
+
+@keyframes slideInLeft {
+  0% { transform: translateX(-50px); opacity: 0; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideInRight {
+  0% { transform: translateX(50px); opacity: 0; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+
+/* Estilos responsivos para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .experience-section {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .experience-item {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .experience-item img {
+    margin-bottom: 10px;
+  }
+
+  .company-name {
+    font-size: 1.1rem;
+  }
+
+  .job-description {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .experience-item {
+    padding: 10px;
+  }
+
+  .company-name {
+    font-size: 1rem;
+  }
+
+  .job-title {
+    font-size: 0.9rem;
+  }
+
+  .dates, .location {
+    font-size: 0.8rem;
+  }
+
+  .job-description {
+    font-size: 0.8rem;
+  }
+}
+
+#particles-js {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: -1;
+}
+
+
+/* Animación de caída */
+@keyframes caer {
+  0% {
+      opacity: 0;
+      transform: translateY(-100px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Estilo para el contenedor de contacto */
+.contacto-container {
+  animation: caer 1s ease-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.contacto {
+  text-align: center;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+}
+
+.contacto h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.contacto p {
+  margin-bottom: 20px;
+  color: #777;
+}
+
+.red-social {
+  display: block;
+  margin: 10px 0;
+  text-decoration: none;
+  font-size: 16px;
+  color: #fff;
+  background-color: #333;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.red-social:hover {
+  background-color: #af1ae0;
+}
